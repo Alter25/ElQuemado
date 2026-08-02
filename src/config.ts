@@ -1,5 +1,5 @@
-// TODO: reemplaza con el número real de WhatsApp (solo dígitos, con código de país)
-export const WHATSAPP_URL = 'https://wa.me/521XXXXXXXXXX';
+export const FACEBOOK_URL = 'https://www.facebook.com/p/Elotes-El-Quemado-100063556659840/';
+export const FACEBOOK_HANDLE = 'Elotes El Quemado';
 
 export const DIRECCION = 'Blvd. San Alberto #408, int. 3, Col. Miravalle, Gómez Palacio, Dgo.';
 

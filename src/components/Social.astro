@@ -1,0 +1,52 @@
+---
+import { FACEBOOK_URL, FACEBOOK_HANDLE } from '../config';
+---
+<section id="redes" class="py-24 px-8 bg-brand-cream">
+  <div class="max-w-[720px] mx-auto text-center">
+    <span class="uppercase tracking-[1.5px] text-brand-orange font-extrabold text-sm">
+      Redes sociales
+    </span>
+    <h2 class="font-fredoka font-bold text-brand-brown text-[clamp(26px,4vw,36px)] mt-3 mb-4">
+      Síguenos en Facebook
+    </h2>
+    <p class="text-brand-muted text-[17px] leading-relaxed mb-10">
+      Publicamos promos, fotos del día y novedades. No te pierdas nada de El Quemado.
+    </p>
+
+    <a
+      href={FACEBOOK_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#1877f2] text-white font-extrabold text-base shadow-lg hover:scale-105 transition-transform no-underline"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-white shrink-0" viewBox="0 0 24 24">
+        <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+      </svg>
+      {FACEBOOK_HANDLE}
+    </a>
+
+    <div class="mt-14 grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5 text-left">
+      <div class="bg-white rounded-2xl p-6 shadow-[0_4px_20px_rgba(43,26,16,0.08)] flex gap-4 items-start">
+        <span class="text-2xl mt-0.5">📸</span>
+        <div>
+          <h3 class="font-fredoka font-semibold text-brand-brown text-lg mb-1">Fotos del día</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">Subimos fotos de los antojitos recién preparados cada vez que abrimos.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-[0_4px_20px_rgba(43,26,16,0.08)] flex gap-4 items-start">
+        <span class="text-2xl mt-0.5">🎉</span>
+        <div>
+          <h3 class="font-fredoka font-semibold text-brand-brown text-lg mb-1">Promos exclusivas</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">Las mejores ofertas se anuncian primero en Facebook. ¡Activa notificaciones!</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-[0_4px_20px_rgba(43,26,16,0.08)] flex gap-4 items-start">
+        <span class="text-2xl mt-0.5">📍</span>
+        <div>
+          <h3 class="font-fredoka font-semibold text-brand-brown text-lg mb-1">Avisos de apertura</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">Avisamos cuando abrimos y si hay algún cambio en el horario.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

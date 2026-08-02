@@ -1,5 +1,5 @@
 ---
-import { DIRECCION } from '../config';
+import { DIRECCION, FACEBOOK_URL } from '../config';
 ---
 <footer class="bg-brand-brown text-white pt-12 pb-6 px-8">
   <div class="max-w-[1200px] mx-auto flex flex-wrap gap-8 justify-between pb-7 border-b border-white/12">
@@ -11,12 +11,25 @@ import { DIRECCION } from '../config';
       </div>
     </div>
 
-    <nav class="flex gap-7 flex-wrap items-center">
-      <a href="#menu"      class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Menú</a>
-      <a href="#promos"    class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Promos</a>
-      <a href="#horarios"  class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Horarios</a>
-      <a href="#ubicacion" class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Ubicación</a>
-    </nav>
+    <div class="flex flex-col gap-4">
+      <nav class="flex gap-7 flex-wrap items-center">
+        <a href="#menu"      class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Menú</a>
+        <a href="#promos"    class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Promos</a>
+        <a href="#horarios"  class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Horarios</a>
+        <a href="#ubicacion" class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Ubicación</a>
+      </nav>
+      <a
+        href={FACEBOOK_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-white/85 font-bold text-sm hover:text-[#1877f2] transition-colors no-underline"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+        </svg>
+        Facebook
+      </a>
+    </div>
   </div>
 
   <div class="max-w-[1200px] mx-auto pt-5 text-white/55 text-[13px]">
