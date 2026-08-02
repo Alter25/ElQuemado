@@ -1,5 +1,5 @@
 ---
-import { FACEBOOK_URL } from '../config';
+import { WHATSAPP_URL, FACEBOOK_URL } from '../config';
 ---
 <section
   class="relative min-h-[92vh] flex items-end bg-cover bg-center"
@@ -20,21 +20,18 @@ import { FACEBOOK_URL } from '../config';
     </p>
     <div class="flex gap-4 flex-wrap mt-8">
       <a
-        href="#menu"
-        class="px-7 py-4 rounded-full bg-brand-yellow text-brand-brown font-extrabold text-base shadow-xl hover:scale-105 transition-transform no-underline"
-      >
-        Ver el menú
-      </a>
-      <a
-        href={FACEBOOK_URL}
+        href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 px-7 py-4 rounded-full border-2 border-white/70 text-white font-bold text-base hover:bg-white/10 transition-colors no-underline"
+        class="px-7 py-4 rounded-full bg-brand-yellow text-brand-brown font-extrabold text-base shadow-xl hover:scale-105 transition-transform no-underline"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24">
-          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-        </svg>
-        Facebook
+        Pedir por WhatsApp
+      </a>
+      <a
+        href="#menu"
+        class="px-7 py-4 rounded-full border-2 border-white/70 text-white font-bold text-base hover:bg-white/10 transition-colors no-underline"
+      >
+        Ver el menú
       </a>
     </div>
   </div>
