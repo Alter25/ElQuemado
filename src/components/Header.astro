@@ -1,0 +1,47 @@
+---
+import { WHATSAPP_URL } from '../config';
+
+const navLinks = [
+  { href: '#menu',      label: 'Menú' },
+  { href: '#promos',    label: 'Promos' },
+  { href: '#horarios',  label: 'Horarios' },
+  { href: '#ubicacion', label: 'Ubicación' },
+];
+---
+<header
+  id="top"
+  class="sticky top-0 z-50 flex items-center justify-between gap-5 flex-wrap px-8 py-3.5 bg-brand-brown/82 backdrop-blur-md"
+>
+  <a href="#top" class="flex items-center gap-3 no-underline">
+    <img
+      src="/assets/logo-mascota.png"
+      alt="Elotes y Nachos El Quemado"
+      class="w-12 h-12 rounded-full shrink-0"
+    />
+    <div class="flex flex-col leading-tight">
+      <span class="font-fredoka text-[11px] tracking-[1.5px] text-brand-yellow font-semibold uppercase">
+        Elotes y Nachos
+      </span>
+      <span class="font-fredoka text-xl font-bold text-white">"El Quemado"</span>
+    </div>
+  </a>
+
+  <nav class="flex items-center gap-7 flex-wrap">
+    {navLinks.map(({ href, label }) => (
+      <a
+        href={href}
+        class="text-white font-bold text-sm hover:text-brand-yellow transition-colors no-underline"
+      >
+        {label}
+      </a>
+    ))}
+    <a
+      href={WHATSAPP_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="px-5 py-2.5 rounded-full bg-brand-yellow text-brand-brown font-extrabold text-sm shadow-lg hover:scale-105 transition-transform no-underline"
+    >
+      Pedir por WhatsApp
+    </a>
+  </nav>
+</header>

@@ -1,0 +1,70 @@
+---
+const items = [
+  {
+    img: '/uploads/muestra2.png',
+    alt: 'Elotes y esquites recién preparados',
+    title: 'Elotes y esquites',
+    desc: 'Elote asado, mantequilla, queso y chile al gusto. El clásico que nunca falla.',
+  },
+  {
+    img: '/uploads/756526460_1671698658292007_9031773149295818273_n.jpg',
+    alt: 'Dorilocos bañados en queso con crema y toppings',
+    title: 'Dorilocos y nachos con queso',
+    desc: 'Doritos bañados en queso derretido, crema y todo lo que se te antoje encima.',
+  },
+  {
+    img: '/uploads/756612746_1024299070396298_4496433949251737180_n.jpeg',
+    alt: 'Ramen coreano picante con queso',
+    title: 'Ramen coreano picante',
+    desc: 'Ramen buldak cargado de queso, chile en polvo y mucho sabor picante.',
+  },
+  {
+    img: '/uploads/760671521_1104439545485807_7756973616475246702_n.jpeg',
+    alt: 'Gomibolis y gomipaletas con chamoy',
+    title: 'Gomibolis y gomipaletas',
+    desc: 'Gomitas bañadas en chamoy y chile en polvo, con paleta de agua a elegir.',
+  },
+  {
+    img: '/uploads/muestra5.png',
+    alt: 'Esquimales y postres con chocolate',
+    title: 'Esquimales y postres con chocolate',
+    desc: 'Paletas cubiertas de chocolate y toppings, o postres con fresa y chocolate derretido.',
+    imgPosition: 'object-[center_20%]',
+  },
+  {
+    img: '/uploads/muestra7.png',
+    alt: 'Mangonadas y chamoyadas',
+    title: 'Mangonadas y chamoyadas',
+    desc: 'Mango, chamoy, chile y mucho hielo. Refrescante y picosito.',
+    imgPosition: 'object-[center_20%]',
+  },
+];
+---
+<section id="menu" class="py-24 px-8 max-w-[1240px] mx-auto">
+  <span class="uppercase tracking-[1.5px] text-brand-orange font-extrabold text-sm">
+    Nuestro menú
+  </span>
+  <h2 class="font-fredoka font-bold text-brand-brown text-[clamp(28px,4vw,42px)] mt-3 mb-3.5">
+    Antojitos hechos al momento
+  </h2>
+  <p class="text-brand-muted max-w-xl text-[17px] leading-relaxed">
+    Cada orden se prepara fresca, con el toque picoso y quesudo que nos caracteriza.
+  </p>
+
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-7 mt-12">
+    {items.map(({ img, alt, title, desc, imgPosition }) => (
+      <article class="bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(43,26,16,0.1)] hover:-translate-y-1.5 transition-transform duration-300">
+        <img
+          src={img}
+          alt={alt}
+          class={`w-full h-[220px] object-cover ${imgPosition ?? ''}`}
+          loading="lazy"
+        />
+        <div class="p-6 pb-7">
+          <h3 class="font-fredoka font-semibold text-xl text-brand-brown mb-2">{title}</h3>
+          <p class="text-brand-muted text-[15px] leading-relaxed">{desc}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

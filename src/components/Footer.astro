@@ -1,0 +1,25 @@
+---
+import { DIRECCION } from '../config';
+---
+<footer class="bg-brand-brown text-white pt-12 pb-6 px-8">
+  <div class="max-w-[1200px] mx-auto flex flex-wrap gap-8 justify-between pb-7 border-b border-white/12">
+    <div class="flex items-center gap-3.5">
+      <img src="/assets/logo-mascota.png" alt="" class="w-[52px] h-[52px] rounded-full" />
+      <div>
+        <div class="font-fredoka font-bold text-lg">Elotes y Nachos "El Quemado"</div>
+        <div class="text-white/70 text-sm mt-1">{DIRECCION}</div>
+      </div>
+    </div>
+
+    <nav class="flex gap-7 flex-wrap items-center">
+      <a href="#menu"      class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Menú</a>
+      <a href="#promos"    class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Promos</a>
+      <a href="#horarios"  class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Horarios</a>
+      <a href="#ubicacion" class="text-white/85 font-bold text-sm hover:text-brand-yellow transition-colors no-underline">Ubicación</a>
+    </nav>
+  </div>
+
+  <div class="max-w-[1200px] mx-auto pt-5 text-white/55 text-[13px]">
+    © {new Date().getFullYear()} Elotes y Nachos "El Quemado" · Gómez Palacio, Durango.
+  </div>
+</footer>

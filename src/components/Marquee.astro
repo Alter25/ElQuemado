@@ -1,0 +1,18 @@
+---
+const items = [
+  'ELOTES',
+  'DORILOCOS',
+  'NACHOS CON QUESO',
+  'RAMEN COREANO PICANTE',
+  'GOMIBOLIS',
+  'ESQUIMALES',
+  'MANGONADAS',
+];
+const ticker = items.join('  •  ') + '  •';
+---
+<div class="overflow-hidden bg-brand-yellow border-y-4 border-brand-brown py-3.5">
+  <div class="flex w-max whitespace-nowrap animate-marquee">
+    <span class="font-fredoka font-bold text-xl text-brand-brown px-10">{ticker}</span>
+    <span class="font-fredoka font-bold text-xl text-brand-brown px-10">{ticker}</span>
+  </div>
+</div>

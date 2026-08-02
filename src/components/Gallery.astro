@@ -1,0 +1,31 @@
+---
+const photos = [
+  { src: '/uploads/muestra1.jpg',   alt: 'Antojito El Quemado' },
+  { src: '/uploads/muestra4.jpg',   alt: 'Antojito El Quemado' },
+  { src: '/uploads/754725075_1671698651625341_6055459013165750581_n.jpg', alt: 'Antojito El Quemado' },
+  { src: '/uploads/754915003_1671698541625352_6653971292257352116_n.jpg', alt: 'Antojito El Quemado' },
+  { src: '/uploads/muestra8.png',   alt: 'Antojito El Quemado' },
+  { src: '/uploads/760574047_1066074246108293_6432502411633216695_n.jpeg', alt: 'Antojito El Quemado' },
+  { src: '/uploads/759224636_3223822308006314_6387815723448513585_n.jpeg', alt: 'Antojito El Quemado' },
+  { src: '/uploads/759871555_1709844810305938_5752372090008402859_n.jpeg', alt: 'Antojito El Quemado' },
+];
+---
+<section class="py-24 px-8 max-w-[1240px] mx-auto">
+  <div class="text-center max-w-xl mx-auto">
+    <span class="uppercase tracking-[1.5px] text-brand-orange font-extrabold text-sm">Galería</span>
+    <h2 class="font-fredoka font-bold text-brand-brown text-[clamp(26px,4vw,36px)] mt-3">
+      Fotos que hablan por sí solas
+    </h2>
+  </div>
+
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 mt-11">
+    {photos.map(({ src, alt }) => (
+      <img
+        src={src}
+        alt={alt}
+        class="w-full aspect-square object-cover rounded-[18px] hover:scale-[1.03] transition-transform duration-300"
+        loading="lazy"
+      />
+    ))}
+  </div>
+</section>

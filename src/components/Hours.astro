@@ -1,0 +1,60 @@
+---
+const OPEN_HOURS = '6:00 pm – 10:30 pm';
+
+const schedule = [
+  { day: 'Miércoles', open: true },
+  { day: 'Jueves',    open: true },
+  { day: 'Viernes',   open: true },
+  { day: 'Sábado',    open: true },
+  { day: 'Domingo',   open: true },
+  { day: 'Lunes',     open: true },
+  { day: 'Martes',    open: false },
+];
+
+const today = new Date().toLocaleDateString('es-MX', { weekday: 'long' });
+const todayCapitalized = today.charAt(0).toUpperCase() + today.slice(1);
+---
+<section id="horarios" class="py-24 px-8 bg-brand-brown text-white">
+  <div class="max-w-[720px] mx-auto">
+    <span class="uppercase tracking-[1.5px] text-brand-yellow font-extrabold text-sm">
+      Horarios
+    </span>
+    <h2 class="font-fredoka font-bold text-[clamp(26px,4vw,36px)] mt-3 mb-2">
+      Te esperamos cada semana
+    </h2>
+    <p class="text-white/70 text-[17px] mb-10">
+      Abrimos miércoles a lunes. Los martes descansamos.
+    </p>
+
+    <ul class="space-y-3">
+      {schedule.map(({ day, open }) => {
+        const isToday = day === todayCapitalized;
+        return (
+          <li
+            class={`flex items-center justify-between px-6 py-4 rounded-2xl transition-colors ${
+              isToday
+                ? 'bg-brand-yellow text-brand-brown'
+                : 'bg-white/8 text-white'
+            }`}
+          >
+            <div class="flex items-center gap-3">
+              {isToday && (
+                <span class="text-xs font-extrabold uppercase tracking-wider bg-brand-brown/15 px-2 py-0.5 rounded-full">
+                  Hoy
+                </span>
+              )}
+              <span class="font-bold text-[17px]">{day}</span>
+            </div>
+            {open ? (
+              <span class={`font-semibold text-[15px] ${isToday ? 'text-brand-brown' : 'text-brand-yellow'}`}>
+                {OPEN_HOURS}
+              </span>
+            ) : (
+              <span class="font-semibold text-[15px] text-white/40">Cerrado</span>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</section>

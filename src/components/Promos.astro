@@ -1,0 +1,34 @@
+---
+import { WHATSAPP_URL } from '../config';
+---
+<section id="promos" class="bg-gradient-to-br from-brand-green to-[#1f4211] py-24 px-8 text-white">
+  <div class="max-w-[1160px] mx-auto flex gap-14 flex-wrap items-center justify-center">
+    <img
+      src="/uploads/757831735_1837433054059248_5388015772546995339_n.jpeg"
+      alt="Promoción de los jueves: nieve de agua gratis con papas especiales"
+      class="w-[300px] max-w-full rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.35)] border-[6px] border-white -rotate-3"
+      loading="lazy"
+    />
+    <div class="max-w-[480px]">
+      <span class="uppercase tracking-[1.5px] text-brand-yellow font-extrabold text-sm">
+        Promoción de la semana
+      </span>
+      <h2 class="font-fredoka font-bold text-[clamp(26px,4vw,36px)] mt-3.5 mb-0">
+        ¡Los jueves nadie se resiste!
+      </h2>
+      <p class="text-[17px] leading-relaxed opacity-92 mt-3.5 mb-2.5">
+        En la compra de tus papas especiales, llévate gratis una nieve de agua en bolsa.
+        Solo los jueves.
+      </p>
+      <small class="opacity-65 block mb-6">*Aplican términos y condiciones.</small>
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block px-7 py-3.5 rounded-full bg-brand-yellow text-brand-brown font-extrabold text-sm hover:scale-105 transition-transform no-underline"
+      >
+        Pedir por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
